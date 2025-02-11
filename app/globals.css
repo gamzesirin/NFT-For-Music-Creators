@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--background: #000000;
+	--foreground: #ffffff;
+
+	/* Gradient renkler */
+	--gradient-start: rgba(10, 10, 10, 0.9);
+	--gradient-end: rgba(10, 10, 10, 0.7);
+
+	/* Özel gradient renkler */
+	--gradient-purple: #b44fef;
+	--gradient-blue: #4f8bef;
+	--gradient-cyan: #4fefef;
+
+	/* Header için özel gradient */
+	--header-gradient: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+
+	/* Ana gradient */
+	--main-gradient: linear-gradient(
+		135deg,
+		var(--gradient-purple) 0%,
+		var(--gradient-blue) 50%,
+		var(--gradient-cyan) 100%
+	);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+
+		/* Dark mode gradient renkler */
+		--gradient-start: rgba(10, 10, 10, 0.9);
+		--gradient-end: rgba(10, 10, 10, 0.7);
+
+		/* Dark mode özel gradient renkler - aynı renkler kalabilir */
+		--gradient-1: #22c55e;
+		--gradient-2: #d946ef;
+		--gradient-3: #3b82f6;
+		--gradient-4: #a855f7;
+	}
+}
+
+body {
+	color: var(--foreground);
+	background: var(--background);
+	font-family: Arial, Helvetica, sans-serif;
+}
